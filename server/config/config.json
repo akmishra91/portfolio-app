@@ -1,24 +1,24 @@
 {
-    "development": {
-      "username": "your_db_user",
-      "password": "your_db_password",
-      "database": "portfolio_db",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    },
-    "test": {
-      "username": "your_db_user",
-      "password": "your_db_password",
-      "database": "portfolio_db_test",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    },
-    "production": {
-      "username": "your_db_user",
-      "password": "your_db_password",
-      "database": "portfolio_db_production",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
-    }
+  "development": {
+    "username": "postgres",
+    "password": "New@01234",
+    "database": "portfolio_db",
+    "host": "db",
+    "dialect": "postgres",
+    "port": 5432
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
   }
-  
+}

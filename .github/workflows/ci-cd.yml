@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install Dependencies (Client)
         run: |
@@ -40,6 +40,15 @@ jobs:
         run: |
           cd server
           npm test
+
+      - name: Build and Push Docker Images
+        run: |
+          docker build -t portfolio-client ./client
+          docker build -t portfolio-server ./server
+          docker tag portfolio-client:latest dockerakmishra91/portfolio-client:latest
+          docker tag portfolio-server:latest dockerakmishra91/portfolio-server:latest
+          docker push dockerakmishra91/portfolio-client:latest
+          docker push dockerakmishra91/portfolio-server:latest
 
       - name: Deploy to Heroku
         env:
